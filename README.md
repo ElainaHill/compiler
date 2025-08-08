@@ -1,9 +1,13 @@
-# compiler
+Here’s a **README.md** you can use for your project:
+
+---
+
+# CMSC 430 – Project 4: Parser with Semantic Analysis
 
 ## Overview
 
 This project implements a parser with semantic actions for a custom programming language.
-It is designed to detect syntax and semantic errors such as:
+It is designed to detect **syntax** and **semantic errors** such as:
 
 * Undeclared variables
 * Duplicate variable declarations
@@ -14,7 +18,7 @@ It is designed to detect syntax and semantic errors such as:
 * Invalid `fold` operations
 * Mixed numeric/character relational comparisons
 
-The parser is built using Bison for grammar parsing and Flex for lexical analysis.
+The parser is built using **Bison** for grammar parsing and **Flex** for lexical analysis.
 Semantic checks are handled via C++ helper functions integrated into grammar rules.
 
 ---
@@ -66,6 +70,7 @@ The compiler will print:
 
 ## Example Test Input
 
+```plaintext
 function main returns integer;
     a: integer is 5;
     b: real is 3.14;
@@ -86,9 +91,20 @@ end;
 
 ---
 
+## Lessons Learned
+
+* **Integration of Syntax & Semantics**: Adding semantic checks directly to grammar rules ensures early detection of type mismatches and undeclared variables.
+* **Symbol Table Management**: A generic `Symbols<T>` template allows reuse for different variable types (scalars, lists, functions).
+* **Error Propagation**: Returning a `MISMATCH` type when errors occur prevents cascading compiler failures.
+* **Testing Early**: Building test cases incrementally avoids complex debugging late in the project.
+
+---
+
 ## Possible Improvements
 
-* Add function call type checking with parameter lists.
-* Expand error recovery to allow more parsing after an error.
-* Implement constant folding for minor optimizations.
-* Support more data types like booleans and strings.
+* Add **function call** type checking with parameter lists.
+* Expand **error recovery** to allow more parsing after an error.
+* Implement **constant folding** for minor optimizations.
+* Support **more data types** like booleans and strings.
+
+---
