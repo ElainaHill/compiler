@@ -1,7 +1,7 @@
 
 ---
 
-# CMSC 430 – Project 4: Parser with Semantic Analysis
+# Compiler
 
 ## Overview
 
